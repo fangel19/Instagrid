@@ -66,12 +66,18 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jka-Js-gu0">
                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" image="Plus"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o92-R7-VBL">
                                                         <rect key="frame" x="143" y="0.0" width="127.5" height="128"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" image="Plus"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </state>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -87,27 +93,6 @@
                                     <constraint firstAttribute="width" secondItem="0aN-cO-gMY" secondAttribute="height" multiplier="1:1" id="zKD-wi-HJM"/>
                                 </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="FV0-tb-nLZ">
-                                <rect key="frame" x="107.5" y="121.5" width="160.5" height="53.5"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="6Vb-20-uXL">
-                                        <rect key="frame" x="72.5" y="0.0" width="15" height="15"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="JGA-Z2-tBE"/>
-                                            <constraint firstAttribute="width" constant="15" id="aN9-de-76X"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8s-Ah-kiB">
-                                        <rect key="frame" x="0.0" y="24" width="160.5" height="29.5"/>
-                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="FV0-tb-nLZ" secondAttribute="height" multiplier="160:53" id="Xba-Az-Qqr"/>
-                                </constraints>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Thn-S5-Sb3">
                                 <rect key="frame" x="37.5" y="543.5" width="300.5" height="93.5"/>
                                 <subviews>
@@ -185,16 +170,31 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="26U-oC-kwl">
+                                <rect key="frame" x="107" y="91" width="160.5" height="84.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="^" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKy-2d-PFU">
+                                        <rect key="frame" x="71.5" y="0.0" width="18" height="55.5"/>
+                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="highlightedColor" red="0.96078431369999995" green="0.95294117649999999" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8s-Ah-kiB">
+                                        <rect key="frame" x="0.0" y="55.5" width="160.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.71764705880000002" green="0.84313725490000002" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="FV0-tb-nLZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LF5-Jz-g5v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0aN-cO-gMY" secondAttribute="trailing" constant="37" id="LRG-0m-oAd"/>
                             <constraint firstItem="mXu-lW-B0c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NqK-2a-eyD"/>
                             <constraint firstItem="Thn-S5-Sb3" firstAttribute="width" secondItem="0aN-cO-gMY" secondAttribute="width" id="XJu-Am-2ZC"/>
                             <constraint firstItem="0aN-cO-gMY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="idh-t3-ZYi"/>
                             <constraint firstItem="Thn-S5-Sb3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mUj-x2-eXD"/>
-                            <constraint firstItem="0aN-cO-gMY" firstAttribute="top" secondItem="FV0-tb-nLZ" secondAttribute="bottom" constant="8.5" id="oE3-X5-3zP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Thn-S5-Sb3" secondAttribute="bottom" constant="30" id="qxf-Me-wcA"/>
                             <constraint firstItem="mXu-lW-B0c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="w9I-5f-3tM"/>
                             <constraint firstItem="0aN-cO-gMY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37.5" id="zSH-Y4-7rO"/>
@@ -208,11 +208,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow Up" width="4.5" height="3.5"/>
         <image name="Layout 1" width="27" height="27"/>
         <image name="Layout 2" width="27" height="27"/>
         <image name="Layout 3" width="27" height="27"/>
-        <image name="Plus" width="13.5" height="13.5"/>
         <image name="Selected" width="27" height="27"/>
     </resources>
 </document>
