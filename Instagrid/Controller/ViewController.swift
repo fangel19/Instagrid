@@ -9,9 +9,12 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var swipeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        swipeLabel.text = "^\nSwipe up to share"
         // Do any additional setup after loading the view.
     }
 
