@@ -34,12 +34,28 @@ class ViewController: UIViewController {
         swipeLabel.text = "^\nSwipe up to share"
         // Do any additional setup after loading the view.
     }
-
-    @IBAction func didTapButtonPhotoRectangleTop() {
-        startChooseNewButtonView()
+    //    Action button to add photos
+    @IBAction func didTapPhotoTopLeft(_ sender: Any) {
     }
-    private func startChooseNewButtonView() {
-        
+    
+    @IBAction func didTapPhotoTopRight(_ sender: Any) {
     }
+    
+    @IBAction func didTapPhotoDownLeft(_ sender: Any) {
+    }
+    
+    @IBAction func didTapPhotoDownRight(_ sender: Any) {
+    }
+    
+    //Action button style
+    @IBAction func didTapButtonPhotoRectangleTop(_ sender: Any) {
+    }
+    
+    @IBAction func didTapButtonPhotoRectangleDown(_ sender: Any) {
+    }
+    
+    @IBAction func didTapButtonPhotoSquare(_ sender: Any) {
+    }
+    
 }
 
