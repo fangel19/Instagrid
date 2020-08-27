@@ -27,14 +27,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonPhotoSquare: UIButton!
     
     //put a marker on the choice of photos positions
-    @IBOutlet weak var selectedPhotoView: UIImageView!
+    var selectedPhotoView: UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         swipeLabel.text = "^\nSwipe up to share"
         // Do any additional setup after loading the view.
     }
-    //    Action button to add photos
+    
+    // Configuring Button Styles
+    enum StyleGrid {
+        case rectangleTop, rectangleDown, square
+    }
+    
+    // Action button to add photos
     @IBAction func didTapPhotoTopLeft(_ sender: Any) {
     }
     
@@ -49,13 +55,33 @@ class ViewController: UIViewController {
     
     //Action button style
     @IBAction func didTapButtonPhotoRectangleTop(_ sender: Any) {
+        StyleGrid.rectangleTop
     }
     
     @IBAction func didTapButtonPhotoRectangleDown(_ sender: Any) {
+        StyleGrid.rectangleDown
     }
     
     @IBAction func didTapButtonPhotoSquare(_ sender: Any) {
+        StyleGrid.square
     }
     
+    
+    func buttonChoice(_ style: StyleGrid) {
+        switch style {
+        case .rectangleTop:
+            photoTopRight.isHidden = true
+            photoDownRight.isHidden = false
+            
+        case .rectangleDown:
+            photoDownRight.isHidden = true
+            photoTopRight.isHidden = false
+            
+        case .square:
+            photoTopRight.isHidden = false
+            photoDownRight.isHidden = false
+
+        }
+    }
 }
 
