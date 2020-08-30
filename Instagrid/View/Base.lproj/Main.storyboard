@@ -52,7 +52,7 @@
                                                             <color key="titleColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="didTapPhotoTopLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tu8-cr-e3y"/>
+                                                            <action selector="buttonImageTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rfi-P2-VI0"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpd-Oj-SWH">
@@ -63,7 +63,7 @@
                                                             <color key="titleColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="didTapPhotoTopRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5bP-24-A0W"/>
+                                                            <action selector="buttonImageTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0O8-vz-kkC"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -79,7 +79,7 @@
                                                             <color key="titleColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="didTapPhotoDownLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8fs-vn-tcc"/>
+                                                            <action selector="buttonImageTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Bk-X8-EX6"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o92-R7-VBL">
@@ -90,7 +90,7 @@
                                                             <color key="titleColor" red="0.062745098040000002" green="0.40000000000000002" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="didTapPhotoDownRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1WZ-44-tmn"/>
+                                                            <action selector="buttonImageTaped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ooJ-cM-ooe"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -128,10 +128,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="equ-4F-vbw">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
                                                 <state key="normal" title="Button" backgroundImage="Layout 1"/>
-                                                <connections>
-                                                    <action selector="didTapButtonPhotoRectangleTop" destination="BYZ-38-t0r" eventType="touchUpInside" id="j7T-gK-hPs"/>
-                                                    <action selector="didTapButtonPhotoRectangleTop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMg-7t-jd2"/>
-                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="XDa-M6-Upt">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
@@ -156,10 +152,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiX-L7-sTe">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
                                                 <state key="normal" backgroundImage="Layout 2"/>
-                                                <connections>
-                                                    <action selector="didTapButtonPhotoRectangleDown" destination="BYZ-38-t0r" eventType="touchUpInside" id="y3I-1u-Zmx"/>
-                                                    <action selector="didTapButtonPhotoRectangleDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ybB-aT-ibX"/>
-                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="SXC-mL-Rnl">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
@@ -184,10 +176,6 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyW-Rs-IW6">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
                                                 <state key="normal" backgroundImage="Layout 3"/>
-                                                <connections>
-                                                    <action selector="didTapButtonPhotoSquare" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xw4-OH-100"/>
-                                                    <action selector="didTapButtonPhotoSquare:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Oy-Bj-Z3X"/>
-                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-fs-8EY">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
@@ -293,7 +281,6 @@
                         <outlet property="photoDownRight" destination="o92-R7-VBL" id="VfH-ap-7wB"/>
                         <outlet property="photoTopLeft" destination="cZf-jI-Ig5" id="5F6-2H-DnP"/>
                         <outlet property="photoTopRight" destination="tpd-Oj-SWH" id="WXG-Je-ihf"/>
-                        <outlet property="selectedPhotoView" destination="XDa-M6-Upt" id="FTY-1x-gAA"/>
                         <outlet property="swipeLabel" destination="46U-n8-wq9" id="eec-cl-fXN"/>
                     </connections>
                 </viewController>

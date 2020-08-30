@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     
     //put a marker on the choice of photos positions
     var selectedPhotoView: UIImageView?
+    private var buttonImage: UIButton?
+    private var imagePicker: UIImagePickerController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,32 +42,21 @@ class ViewController: UIViewController {
         case rectangleTop, rectangleDown, square
     }
     
-    // Action button to add photos
-    @IBAction func didTapPhotoTopLeft(_ sender: Any) {
+ 
+    @IBAction func buttonImageTaped(_ sender: UIButton) {
+        buttonImage = sender
+        imagePicker = UIImagePickerController()
+        imagePicker?.delegate = self
+        imagePicker?.sourceType = .savedPhotosAlbum
+        
+        guard let secureImagePicker = imagePicker else { return }
+        present(secureImagePicker, animated: true, completion: nil)
+        
     }
     
-    @IBAction func didTapPhotoTopRight(_ sender: Any) {
-    }
     
-    @IBAction func didTapPhotoDownLeft(_ sender: Any) {
-    }
-    
-    @IBAction func didTapPhotoDownRight(_ sender: Any) {
-    }
-    
-    //Action button style
-    @IBAction func didTapButtonPhotoRectangleTop(_ sender: Any) {
-        StyleGrid.rectangleTop
-    }
-    
-    @IBAction func didTapButtonPhotoRectangleDown(_ sender: Any) {
-        StyleGrid.rectangleDown
-    }
-    
-    @IBAction func didTapButtonPhotoSquare(_ sender: Any) {
-        StyleGrid.square
-    }
-    
+
+
     
     func buttonChoice(_ style: StyleGrid) {
         switch style {
@@ -85,3 +76,16 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if  let pickImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            self.buttonImage?.setImage(nil, for: .normal)
+            self.buttonImage?.setBackgroundImage(pickImage, for: .normal)
+            
+            self.dismiss(animated: true) {
+                self.imagePicker = nil
+                self.buttonImage = nil
+            }
+        }
+    }
+}
