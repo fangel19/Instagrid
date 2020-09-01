@@ -128,6 +128,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="equ-4F-vbw">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
                                                 <state key="normal" title="Button" backgroundImage="Layout 1"/>
+                                                <connections>
+                                                    <action selector="choiceOfPhotoDisplayStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gCd-gV-xSF"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="XDa-M6-Upt">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
@@ -152,6 +155,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NiX-L7-sTe">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
                                                 <state key="normal" backgroundImage="Layout 2"/>
+                                                <connections>
+                                                    <action selector="choiceOfPhotoDisplayStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TpM-hw-Gxf"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="SXC-mL-Rnl">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
@@ -176,6 +182,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RyW-Rs-IW6">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
                                                 <state key="normal" backgroundImage="Layout 3"/>
+                                                <connections>
+                                                    <action selector="choiceOfPhotoDisplayStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bva-Ve-K6c"/>
+                                                </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-fs-8EY">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>

@@ -38,9 +38,9 @@ class ViewController: UIViewController {
     }
     
     // Configuring Button Styles
-    enum StyleGrid {
-        case rectangleTop, rectangleDown, square
-    }
+//    enum StyleGrid {
+//        case rectangleTop, rectangleDown, square
+//    }
     
  
     @IBAction func buttonImageTaped(_ sender: UIButton) {
@@ -51,27 +51,37 @@ class ViewController: UIViewController {
         
         guard let secureImagePicker = imagePicker else { return }
         present(secureImagePicker, animated: true, completion: nil)
-        
     }
     
     
-
-
+    @IBAction func choiceOfPhotoDisplayStyle(_ sender: UIButton) {
+        switch sender.tag {
+        case 1:
+            buttonChoice(choice: "rectangleTop")
+        case 2:
+            buttonChoice(choice: "rectangleDown")
+        case 3:
+            buttonChoice(choice: "square")
+        default:
+            break
+        }
+    }
     
-    func buttonChoice(_ style: StyleGrid) {
-        switch style {
-        case .rectangleTop:
+    func buttonChoice(choice: String) {
+        switch choice {
+        case "rectangleTop":
             photoTopRight.isHidden = true
             photoDownRight.isHidden = false
             
-        case .rectangleDown:
+        case "rectangleDown":
             photoDownRight.isHidden = true
             photoTopRight.isHidden = false
             
-        case .square:
+        case "square":
             photoTopRight.isHidden = false
             photoDownRight.isHidden = false
-
+        default:
+            break
         }
     }
 }
