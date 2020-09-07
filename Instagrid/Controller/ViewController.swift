@@ -57,27 +57,27 @@ class ViewController: UIViewController {
     @IBAction func choiceOfPhotoDisplayStyle(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            buttonChoice(choice: "rectangleTop")
+            buttonChoice(choice: buttonPhotoRectangleTop)
         case 2:
-            buttonChoice(choice: "rectangleDown")
+            buttonChoice(choice: buttonPhotoRectangleDown)
         case 3:
-            buttonChoice(choice: "square")
+            buttonChoice(choice: buttonPhotoSquare)
         default:
             break
         }
     }
     
-    func buttonChoice(choice: String) {
+    func buttonChoice(choice: UIButton) {
         switch choice {
-        case "rectangleTop":
+        case buttonPhotoRectangleTop:
             photoTopRight.isHidden = true
             photoDownRight.isHidden = false
             
-        case "rectangleDown":
+        case buttonPhotoRectangleDown:
             photoDownRight.isHidden = true
             photoTopRight.isHidden = false
             
-        case "square":
+        case buttonPhotoSquare:
             photoTopRight.isHidden = false
             photoDownRight.isHidden = false
         default:
