@@ -127,12 +127,12 @@
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="equ-4F-vbw">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
-                                                <state key="normal" title="Button" backgroundImage="Layout 1"/>
+                                                <state key="normal" backgroundImage="Layout 1"/>
                                                 <connections>
                                                     <action selector="choiceOfPhotoDisplayStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gCd-gV-xSF"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="XDa-M6-Upt">
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="XDa-M6-Upt">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
                                             </imageView>
                                         </subviews>
@@ -159,7 +159,7 @@
                                                     <action selector="choiceOfPhotoDisplayStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TpM-hw-Gxf"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="SXC-mL-Rnl">
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="SXC-mL-Rnl">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
                                             </imageView>
                                         </subviews>
@@ -186,7 +186,7 @@
                                                     <action selector="choiceOfPhotoDisplayStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bva-Ve-K6c"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-fs-8EY">
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="QYx-fs-8EY">
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="84.666666666666671"/>
                                             </imageView>
                                         </subviews>
@@ -286,6 +286,9 @@
                         <outlet property="buttonPhotoRectangleDown" destination="NiX-L7-sTe" id="vgK-KY-aAO"/>
                         <outlet property="buttonPhotoRectangleTop" destination="equ-4F-vbw" id="ZxH-dP-T9B"/>
                         <outlet property="buttonPhotoSquare" destination="RyW-Rs-IW6" id="rVh-ti-4gD"/>
+                        <outlet property="buttonSelectedView1" destination="XDa-M6-Upt" id="yFv-lH-0Ms"/>
+                        <outlet property="buttonSelectedView2" destination="SXC-mL-Rnl" id="GyJ-sk-nia"/>
+                        <outlet property="buttonSelectedView3" destination="QYx-fs-8EY" id="GX8-qs-ToL"/>
                         <outlet property="photoDownLeft" destination="Jka-Js-gu0" id="T4F-0V-nxp"/>
                         <outlet property="photoDownRight" destination="o92-R7-VBL" id="VfH-ap-7wB"/>
                         <outlet property="photoTopLeft" destination="cZf-jI-Ig5" id="5F6-2H-DnP"/>

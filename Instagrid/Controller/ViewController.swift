@@ -15,6 +15,12 @@ class ViewController: UIViewController {
     //Blue frame view for photo display
     @IBOutlet weak var bluePhotoFrameView: UIView!
     
+//Button selected view
+    
+    @IBOutlet weak var buttonSelectedView1: UIImageView!
+    @IBOutlet weak var buttonSelectedView2: UIImageView!
+    @IBOutlet weak var buttonSelectedView3: UIImageView!
+    
     //Outlet of each button to add photos
     @IBOutlet weak var photoTopLeft: UIButton!
     @IBOutlet weak var photoTopRight: UIButton!
@@ -73,13 +79,25 @@ class ViewController: UIViewController {
             photoTopRight.isHidden = true
             photoDownRight.isHidden = false
             
+            buttonSelectedView1.isHidden = false
+            buttonSelectedView2.isHidden = true
+            buttonSelectedView3.isHidden = true
+            
         case buttonPhotoRectangleDown:
             photoDownRight.isHidden = true
             photoTopRight.isHidden = false
             
+            buttonSelectedView1.isHidden = true
+            buttonSelectedView2.isHidden = false
+            buttonSelectedView3.isHidden = true
+            
         case buttonPhotoSquare:
             photoTopRight.isHidden = false
             photoDownRight.isHidden = false
+            
+            buttonSelectedView1.isHidden = true
+            buttonSelectedView2.isHidden = true
+            buttonSelectedView3.isHidden = false
         default:
             break
         }
