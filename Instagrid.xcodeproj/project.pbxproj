@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		24FBDDDB24E820490016F25C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBDDDA24E820490016F25C /* AppDelegate.swift */; };
-		24FBDDDD24E820490016F25C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBDDDC24E820490016F25C /* SceneDelegate.swift */; };
 		24FBDDDF24E8204A0016F25C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBDDDE24E8204A0016F25C /* ViewController.swift */; };
 		24FBDDE224E8204A0016F25C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24FBDDE024E8204A0016F25C /* Main.storyboard */; };
 		24FBDDE424E820530016F25C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24FBDDE324E820530016F25C /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		24FBDDD724E820490016F25C /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FBDDDA24E820490016F25C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		24FBDDDC24E820490016F25C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24FBDDDE24E8204A0016F25C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		24FBDDE124E8204A0016F25C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24FBDDE324E820530016F25C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,13 +39,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		24B9719E24E97DF300B8FAE7 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		24B9719F24EA6E8800B8FAE7 /* Polices */ = {
 			isa = PBXGroup;
 			children = (
@@ -76,11 +67,9 @@
 		24FBDDD924E820490016F25C /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				24B9719E24E97DF300B8FAE7 /* Model */,
 				24FBDDEF24E82E520016F25C /* Supporting Files */,
 				24FBDDEE24E82E380016F25C /* View */,
 				24FBDDF024E82E890016F25C /* Controller */,
-				24FBDDDC24E820490016F25C /* SceneDelegate.swift */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
@@ -188,7 +177,6 @@
 			files = (
 				24FBDDDF24E8204A0016F25C /* ViewController.swift in Sources */,
 				24FBDDDB24E820490016F25C /* AppDelegate.swift in Sources */,
-				24FBDDDD24E820490016F25C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

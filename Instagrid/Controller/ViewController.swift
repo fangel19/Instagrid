@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     //Blue frame view for photo display
     @IBOutlet weak var bluePhotoFrameView: UIView!
     
-//Button selected view
+    //Button selected view
     
     @IBOutlet weak var buttonSelectedView1: UIImageView!
     @IBOutlet weak var buttonSelectedView2: UIImageView!
@@ -39,16 +39,40 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        swipeLabel.text = "^\nSwipe up to share"
+        setSwipeLabel(bool: UIApplication.shared.statusBarOrientation.isPortrait)
+        addGestureRecognizer()
         // Do any additional setup after loading the view.
     }
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        setSwipeLabel(bool: UIDevice.current.orientation.isPortrait)
+    }
     
+    private func setSwipeLabel(bool: Bool) {
+        swipeLabel.text = (bool) ? "^\nSwipe up to share" : "<\nSwipe left to share"
+    }
+    
+    private func addGestureRecognizer() {
+        let swipeUpGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeFonction))
+        swipeUpGestureRecognizer.direction = .up
+        view.addGestureRecognizer(swipeUpGestureRecognizer)
+        let swipeLeftGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeFonction))
+        swipeLeftGestureRecognizer.direction = .left
+        view.addGestureRecognizer(swipeLeftGestureRecognizer)
+    }
+    @objc private func swipeFonction(_ recognizer: UISwipeGestureRecognizer) {
+        if UIDevice.current.orientation.isPortrait, recognizer.direction == .up {
+            print("up")
+        } else if UIDevice.current.orientation.isLandscape, recognizer.direction == .left {
+            print("left")
+        }
+    }
     // Configuring Button Styles
-//    enum StyleGrid {
-//        case rectangleTop, rectangleDown, square
-//    }
+    //    enum StyleGrid {
+    //        case rectangleTop, rectangleDown, square
+    //    }
     
- 
+    
     @IBAction func buttonImageTaped(_ sender: UIButton) {
         buttonImage = sender
         imagePicker = UIImagePickerController()
@@ -102,6 +126,7 @@ class ViewController: UIViewController {
             break
         }
     }
+    
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
