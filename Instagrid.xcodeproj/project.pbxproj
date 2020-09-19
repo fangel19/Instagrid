@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24EEA1D425127C4600586850 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EEA1D325127C4600586850 /* SceneDelegate.swift */; };
 		24FBDDDB24E820490016F25C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBDDDA24E820490016F25C /* AppDelegate.swift */; };
 		24FBDDDF24E8204A0016F25C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBDDDE24E8204A0016F25C /* ViewController.swift */; };
 		24FBDDE224E8204A0016F25C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24FBDDE024E8204A0016F25C /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24EEA1D325127C4600586850 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24FBDDD724E820490016F25C /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FBDDDA24E820490016F25C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24FBDDDE24E8204A0016F25C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				24FBDDEF24E82E520016F25C /* Supporting Files */,
 				24FBDDEE24E82E380016F25C /* View */,
 				24FBDDF024E82E890016F25C /* Controller */,
+				24EEA1D325127C4600586850 /* SceneDelegate.swift */,
 			);
 			path = Instagrid;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			files = (
 				24FBDDDF24E8204A0016F25C /* ViewController.swift in Sources */,
 				24FBDDDB24E820490016F25C /* AppDelegate.swift in Sources */,
+				24EEA1D425127C4600586850 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

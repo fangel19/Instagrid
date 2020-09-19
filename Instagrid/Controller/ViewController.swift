@@ -81,6 +81,7 @@ class ViewController: UIViewController {
         
         guard let secureImagePicker = imagePicker else { return }
         present(secureImagePicker, animated: true, completion: nil)
+//        buttonImage?.setTitle("+", for: .normal)
     }
     
     
