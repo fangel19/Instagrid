@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2444CC9C2516124500806724 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2444CC9B2516124500806724 /* UIView.swift */; };
 		24EEA1D425127C4600586850 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EEA1D325127C4600586850 /* SceneDelegate.swift */; };
 		24FBDDDB24E820490016F25C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBDDDA24E820490016F25C /* AppDelegate.swift */; };
 		24FBDDDF24E8204A0016F25C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FBDDDE24E8204A0016F25C /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2444CC9B2516124500806724 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		24EEA1D325127C4600586850 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		24FBDDD724E820490016F25C /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24FBDDDA24E820490016F25C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2444CC9A2516120800806724 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2444CC9B2516124500806724 /* UIView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		24B9719F24EA6E8800B8FAE7 /* Polices */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 		24FBDDD924E820490016F25C /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
+				2444CC9A2516120800806724 /* Extension */,
 				24FBDDEF24E82E520016F25C /* Supporting Files */,
 				24FBDDEE24E82E380016F25C /* View */,
 				24FBDDF024E82E890016F25C /* Controller */,
@@ -178,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2444CC9C2516124500806724 /* UIView.swift in Sources */,
 				24FBDDDF24E8204A0016F25C /* ViewController.swift in Sources */,
 				24FBDDDB24E820490016F25C /* AppDelegate.swift in Sources */,
 				24EEA1D425127C4600586850 /* SceneDelegate.swift in Sources */,

@@ -36,6 +36,7 @@ class ViewController: UIViewController {
     var selectedPhotoView: UIImageView?
     private var buttonImage: UIButton?
     private var imagePicker: UIImagePickerController?
+    private var activityViewController: UIActivityViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,10 +64,22 @@ class ViewController: UIViewController {
     @objc private func swipeFonction(_ recognizer: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isPortrait, recognizer.direction == .up {
             print("up")
+            shared(direction: .up)
         } else if UIDevice.current.orientation.isLandscape, recognizer.direction == .left {
             print("left")
+            shared(direction: .left)
         }
     }
+    private func shared(direction: UISwipeGestureRecognizer.Direction) {
+        guard let imageView = bluePhotoFrameView.asImage() else { return }
+        activityViewController = UIActivityViewController(activityItems: [imageView as UIImage], applicationActivities: nil)
+        guard let activityVC = activityViewController else { return }
+//        activityVC.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+//            }
+        present(activityVC, animated: true, completion: nil)
+
+    }
+    
     // Configuring Button Styles
     //    enum StyleGrid {
     //        case rectangleTop, rectangleDown, square
@@ -81,7 +94,6 @@ class ViewController: UIViewController {
         
         guard let secureImagePicker = imagePicker else { return }
         present(secureImagePicker, animated: true, completion: nil)
-//        buttonImage?.setTitle("+", for: .normal)
     }
     
     
