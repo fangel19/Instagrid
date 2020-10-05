@@ -10,13 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // MARK: - outlet
+    // Swipe label
     @IBOutlet weak var swipeLabel: UILabel!
     
     //Blue frame view for photo display
     @IBOutlet weak var bluePhotoFrameView: UIView!
     
     //Button selected view
-    
     @IBOutlet weak var buttonSelectedView1: UIImageView!
     @IBOutlet weak var buttonSelectedView2: UIImageView!
     @IBOutlet weak var buttonSelectedView3: UIImageView!
@@ -42,8 +43,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setSwipeLabel(bool: UIApplication.shared.statusBarOrientation.isPortrait)
         addGestureRecognizer()
-        // Do any additional setup after loading the view.
     }
+    
+    // MARK: - select landscape or portrait view
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         setSwipeLabel(bool: UIDevice.current.orientation.isPortrait)
@@ -61,6 +64,7 @@ class ViewController: UIViewController {
         swipeLeftGestureRecognizer.direction = .left
         view.addGestureRecognizer(swipeLeftGestureRecognizer)
     }
+    
     @objc private func swipeFonction(_ recognizer: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isPortrait, recognizer.direction == .up {
             print("up")
@@ -70,22 +74,20 @@ class ViewController: UIViewController {
             shared(direction: .left)
         }
     }
+    
+    // MARK: - Allows Photo
+    // It allows to share the image
+    
     private func shared(direction: UISwipeGestureRecognizer.Direction) {
         guard let imageView = bluePhotoFrameView.asImage() else { return }
         activityViewController = UIActivityViewController(activityItems: [imageView as UIImage], applicationActivities: nil)
         guard let activityVC = activityViewController else { return }
-//        activityVC.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
-//            }
+        
         present(activityVC, animated: true, completion: nil)
-
     }
     
-    // Configuring Button Styles
-    //    enum StyleGrid {
-    //        case rectangleTop, rectangleDown, square
-    //    }
-    
-    
+    // MARK: - Selected Photo
+    // Allows you to display the image folder
     @IBAction func buttonImageTaped(_ sender: UIButton) {
         buttonImage = sender
         imagePicker = UIImagePickerController()
@@ -96,7 +98,8 @@ class ViewController: UIViewController {
         present(secureImagePicker, animated: true, completion: nil)
     }
     
-    
+    // MARK: - select the presentation of the photos
+
     @IBAction func choiceOfPhotoDisplayStyle(_ sender: UIButton) {
         switch sender.tag {
         case 1:
@@ -139,8 +142,9 @@ class ViewController: UIViewController {
             break
         }
     }
-    
 }
+
+//MARK:- METHOD: UIImagePickerController selected Photo
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
