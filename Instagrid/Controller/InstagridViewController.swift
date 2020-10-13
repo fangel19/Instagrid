@@ -33,6 +33,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonPhotoRectangleDown: UIButton!
     @IBOutlet weak var buttonPhotoSquare: UIButton!
     
+
+    @IBOutlet weak var alignCenterX: NSLayoutConstraint!
+    @IBOutlet weak var alignCenterY: NSLayoutConstraint!
+    
     //put a marker on the choice of photos positions
     var selectedPhotoView: UIImageView?
     private var buttonImage: UIButton?
@@ -69,9 +73,23 @@ class ViewController: UIViewController {
         if UIDevice.current.orientation.isPortrait, recognizer.direction == .up {
             print("up")
             shared(direction: .up)
+            self.centerYAnimation(constraintConstant: -UIScreen.main.bounds.height)
         } else if UIDevice.current.orientation.isLandscape, recognizer.direction == .left {
             print("left")
             shared(direction: .left)
+            self.centerXAnimation(constraintConstant: -UIScreen.main.bounds.width)
+        }
+    }
+    private func centerXAnimation(constraintConstant: CGFloat) {
+        UIView.animate(withDuration: 0.5) {
+            self.alignCenterX.constant = constraintConstant
+            self.view.layoutIfNeeded()
+        }
+    }
+    private func centerYAnimation(constraintConstant: CGFloat) {
+        UIView.animate(withDuration: 0.5) {
+            self.alignCenterY.constant = constraintConstant
+            self.view.layoutIfNeeded()
         }
     }
     
@@ -83,6 +101,16 @@ class ViewController: UIViewController {
         activityViewController = UIActivityViewController(activityItems: [imageView as UIImage], applicationActivities: nil)
         guard let activityVC = activityViewController else { return }
         
+        activityVC.completionWithItemsHandler = { (activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+                    
+                    if direction == .up {
+                        self.centerYAnimation(constraintConstant: 0)
+                        self.activityViewController = nil
+                    } else if direction == .left {
+                        self.centerXAnimation(constraintConstant: 0)
+                        self.activityViewController = nil
+                    }
+                }
         present(activityVC, animated: true, completion: nil)
     }
     
